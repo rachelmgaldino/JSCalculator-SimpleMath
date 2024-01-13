@@ -10,10 +10,26 @@
   <link rel="stylesheet" href="./src/css/global.css">
 </head>
 
-<body class="light">
+<body class="dark">
   <div class="main-container">
-    <div class="left-container side-containers"></div>
-    <div class="right-container side-containers"></div>
+    <div class="left-container side-containers">
+      <div class="header">
+        <div class="title">
+          simple math
+        </div>
+        <div id="theme-button">
+          <i class="fa fa-sun" id="icon"></i>
+        </div>
+      </div>
+      <input placeholder="25x6" id="calcInput">
+      <div>*press enter to see the result*</div>
+    </div>
+
+    <div class="right-container side-containers">
+      <div></div> <!-- empty -->
+      <div class="text-result" id="calcResult">0</div>
+      <div>→ view keyboard shortcuts</div>
+    </div>
   </div>
 
   <!-- JS -->

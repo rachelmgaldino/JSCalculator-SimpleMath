@@ -7,6 +7,8 @@
   --primaryColor: #fff;
   --secondaryColor: #fecc02;
   --placeholderColor: rgba(0, 0, 0, 0.05);
+  --textColor1: #121212;
+  --textColor2: #fff;
 }
 
 .dark {
@@ -14,7 +16,8 @@
   --primaryColor: #121212;
   --secondaryColor: #fecc02;
   --placeholderColor: rgba(255, 255, 255, 0.05);
-  --textColor: #fff;
+  --textColor1: #fff;
+  --textColor2: #121212;
 }
 
 /* global styles */
@@ -27,13 +30,12 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bgColor);
-  padding: 5rem 3rem;
+  padding: 5rem;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .main-container {
   display: flex;
@@ -58,4 +60,63 @@ body {
 .right-container {
   border-radius: 0 2rem 2rem 0;
   background-color: var(--secondaryColor);
+}
+
+.left-container > div:first-child {
+  /* the first div inside left-side */
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.left-container > div:last-child {
+  /* the last div inside left-side */
+  color: var(--textColor1);
+}
+
+.right-container > div:last-child {
+  /* the last div inside left-side */
+  color: var(--textColor2);
+}
+
+.title {
+  color: var(--secondaryColor);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input {
+  border: none;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  max-width: 200px;
+  background-color: transparent;
+  color: var(--textColor1);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--placeholderColor);
+}
+
+.text-result {
+  font-weight: 700;
+  font-size: 5rem;
+  color: var(--textColor2);
+}
+
+i {
+  color: var(--secondaryColor);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+div > i {
+  border-radius: 40px;
+  padding: 8px;
+  background-color: var(--placeholderColor);
 }
